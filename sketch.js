@@ -25,7 +25,6 @@ function setup() {
   }
 }
 
-
 function draw() {
   var yoff = 0;
   for (var y = 0; y < rows; y++) {
