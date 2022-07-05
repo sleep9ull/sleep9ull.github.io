@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var inc = 0.1;
 var scl = 10;
 var cols, rows;
@@ -24,21 +23,10 @@ function setup() {
   for (let i = 0; i < 300; i++) {
     particles[i] = new Particle();
   }
-=======
-var x;
-var y = 400;
-var w = 5;
-var h;
-var angle = 0;
-
-function setup() {
-  createCanvas(800, 800);
->>>>>>> 2800b1aa2c9518c4d3cf44438076d162eeb40980
 }
 
 
 function draw() {
-<<<<<<< HEAD
   var yoff = 0;
   for (var y = 0; y < rows; y++) {
     var xoff = 0;
@@ -56,31 +44,10 @@ function draw() {
       // strokeWeight(1);
       // line(0, 0, scl, 0);
       // pop();
-=======
-  background(240);
-  rectMode(CENTER);
-  for (i = 0; i < 3; i++) {
-    for (j = 1; j < 12; j++) {
-      x = j * 30 + i * 10 + 200;
-      h = map(sin(angle + j * 0.2 + i * 1.2), -1, 1, -350, 350);
-      if (h < 0) {
-        fill(23, 27, 33);
-        noStroke();
-        h = abs(h);
-        rect(x, y, w, h);
-        angle += 0.0006;
-      } else {
-        fill(108, 208, 100);
-        noStroke();
-        rect(x, y, w, h);
-        angle += 0.0006;
-      }
->>>>>>> 2800b1aa2c9518c4d3cf44438076d162eeb40980
     }
     yoff += inc;
     zoff += 0.0002;
   }
-<<<<<<< HEAD
 
   for (let i = 0; i < particles.length; i++) {
     particles[i].follow(flowfield);
@@ -90,9 +57,3 @@ function draw() {
   }
   fr.html(floor(frameRate()));
 }
-=======
-}
-
-
-var colors = ['rgb(23, 27, 33)', 'rgb(31, 67, 43)', 'rgb(46, 107, 56)', 'rgb(82, 164, 78)', 'rgb(108, 208, 100)']
->>>>>>> 2800b1aa2c9518c4d3cf44438076d162eeb40980
