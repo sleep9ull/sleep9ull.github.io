@@ -20,7 +20,7 @@ function setup() {
 
   flowfield = new Array(cols * rows);
 
-  for (let i = 0; i < 3000; i++) {
+  for (let i = 0; i < 1000; i++) {
     particles[i] = new Particle();
   }
 }
