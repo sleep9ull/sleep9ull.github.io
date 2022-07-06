@@ -33,7 +33,7 @@ function draw() {
       var index = x + y * cols;
       var angle = noise(xoff, yoff, zoff) * TWO_PI * 1.0;
       var v = p5.Vector.fromAngle(angle);
-      v.setMag(0.3);
+      v.setMag(1.5);
       flowfield[index] = v;
       xoff += inc;
       // stroke(0, 80);
