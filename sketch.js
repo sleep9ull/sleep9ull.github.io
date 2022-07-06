@@ -20,7 +20,7 @@ function setup() {
 
   flowfield = new Array(cols * rows);
 
-  for (let i = 0; i < 300; i++) {
+  for (let i = 0; i < 3000; i++) {
     particles[i] = new Particle();
   }
 }
@@ -31,9 +31,9 @@ function draw() {
     var xoff = 0;
     for (var x = 0; x < cols; x++) {
       var index = x + y * cols;
-      var angle = noise(xoff, yoff, zoff) * TWO_PI * 2;
+      var angle = noise(xoff, yoff, zoff) * TWO_PI * 1.0;
       var v = p5.Vector.fromAngle(angle);
-      v.setMag(0.7);
+      v.setMag(0.3);
       flowfield[index] = v;
       xoff += inc;
       // stroke(0, 80);
