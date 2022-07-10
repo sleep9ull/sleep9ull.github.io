@@ -17,7 +17,7 @@ function draw() {
     beginShape();
     for (let a = 0; a < TWO_PI; a += 0.01) {
       let color = map(b, 0, 10, 0, 255);
-      fill(255, color, 0, 8);
+      fill(0, color, 255, 8);
       let xoff = map(cos(a + b), -1, 1, 0, noiseMax);
       let yoff = map(sin(a + b), -1, 1, 0, noiseMax);
       let r = map(noise(xoff, yoff, zoff), 0, 1, 80, 200);
