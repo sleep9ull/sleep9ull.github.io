@@ -1,58 +1,34 @@
-var inc = 0.1;
-var scl = 10;
-var cols, rows;
-var fr;
-
-var particles = [];
-
-var flowfield;
-
-var zoff = 0;
+let noiseMax = 1.5;
+let zoff = 0;
 
 function setup() {
-  createCanvas(800, 800);
-  // colorMode(HSB, 255);
-  background(255)
-
-  cols = floor(width / scl);
-  rows = floor(height / scl);
-  fr = createP('');
-
-  flowfield = new Array(cols * rows);
-
-  for (let i = 0; i < 1000; i++) {
-    particles[i] = new Particle();
-  }
+  let cnv = createCanvas(400, 400);
+  cnv.parent('sketch');
 }
 
 function draw() {
-  var yoff = 0;
-  for (var y = 0; y < rows; y++) {
-    var xoff = 0;
-    for (var x = 0; x < cols; x++) {
-      var index = x + y * cols;
-      var angle = noise(xoff, yoff, zoff) * TWO_PI * 1.0;
-      var v = p5.Vector.fromAngle(angle);
-      v.setMag(1.5);
-      flowfield[index] = v;
-      xoff += inc;
-      // stroke(0, 80);
-      // push();
-      // translate(x * scl, y * scl);
-      // rotate(v.heading());
-      // strokeWeight(1);
-      // line(0, 0, scl, 0);
-      // pop();
-    }
-    yoff += inc;
-    zoff += 0.0002;
-  }
+  background(250);
+  translate(width / 2, height / 2);
+  stroke(200);
+  strokeWeight(0.4);
 
-  for (let i = 0; i < particles.length; i++) {
-    particles[i].follow(flowfield);
-    particles[i].update();
-    particles[i].edges();
-    particles[i].show();
+  for (let b = 0; b < TWO_PI; b += TWO_PI / 12) {
+
+    beginShape();
+    for (let a = 0; a < TWO_PI; a += 0.01) {
+      let color = map(b, 0, 10, 0, 255);
+      fill(255, color, 0, 8);
+      let xoff = map(cos(a + b), -1, 1, 0, noiseMax);
+      let yoff = map(sin(a + b), -1, 1, 0, noiseMax);
+      let r = map(noise(xoff, yoff, zoff), 0, 1, 80, 200);
+      let x = r * cos(a);
+      let y = r * sin(a);
+      vertex(x, y);
+    }
+    endShape(CLOSE);
+
   }
-  fr.html(floor(frameRate()));
+  // phase += 0.1;
+  zoff += 0.02;
+
 }

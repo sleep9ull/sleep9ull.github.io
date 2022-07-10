@@ -5,14 +5,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>coding demo - 3</title>
-  <script src="/libraries/p5.min.js"></script>
-  <script src="/libraries/p5.sound.min.js"></script>
+
+  <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+  <title>Perlin-Noise-Loop</title>
+
+  <style>
+    body {
+      font-family: Monospace;
+      font-size: 12pt;
+      /*background: #eee;*/
+      /* color: #000; */
+      padding: 0;
+      margin: 0;
+    }
+
+    #description {
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      text-align: center;
+      z-index: 100;
+      display: block;
+    }
+
+    #sketch {
+      padding-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 
 <body>
-  <script src="sketch.js"></script>
-  <script src="particles.js"></script>
+  <div id="description"> - Perlin-Noise-Loop - </br>
+    Created by <a href="https://www.jinchunxu.com/" style="color: #ed225d">Chunxu Jin</a>
+    ,Powered by <a href="https://p5js.org/" style="color: #ed225d">P5.js</a></br>
+    Back to <a href="https://www.jinchunxu.com/" style="color: #ed225d">homepage</a></br>
+  </div>
+
+  <div id="sketch"></div>
 
 </body>
 
