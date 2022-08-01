@@ -28,7 +28,5 @@ function draw() {
     endShape(CLOSE);
 
   }
-  // phase += 0.1;
-  zoff += 0.02;
 
 }
