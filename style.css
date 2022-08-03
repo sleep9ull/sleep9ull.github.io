@@ -1,9 +1,9 @@
 body {
   font-family: Monospace;
   font-size: 12pt;
-  /*background: #eee;*/
+  background: #eee;
   /* color: #000; */
-  padding: 10px;
+  padding: 0px;
   margin: 0;
 }
 
@@ -17,8 +17,7 @@ body {
 }
 
 #sketch {
-  padding-top: 100px;
+  padding-top: 120px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }

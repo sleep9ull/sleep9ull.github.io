@@ -12,11 +12,11 @@ var zoff = 0;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   // colorMode(HSB, 255);
-  background(255)
+  background(255);
 
   cols = floor(width / scl);
   rows = floor(height / scl);
-  fr = createP('');
+  fr = createP("");
 
   flowfield = new Array(cols * rows);
 
@@ -24,7 +24,6 @@ function setup() {
     particles[i] = new Particle();
   }
 }
-
 
 function draw() {
   var yoff = 0;
@@ -55,10 +54,8 @@ function draw() {
     particles[i].edges();
     particles[i].show();
   }
-  fr.html(floor(frameRate()));
+  // fr.html(floor(frameRate()));
 }
-
-
 
 class Particle {
   constructor() {
@@ -90,7 +87,7 @@ class Particle {
   }
 
   show() {
-    stroke(0, 20)
+    stroke(0, 20);
     // stroke(this.h, 255, 255, 255);
     // this.h = this.h + 0.5;
     // if (this.h > 255) {
