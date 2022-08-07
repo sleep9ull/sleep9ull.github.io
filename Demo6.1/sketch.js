@@ -8,6 +8,8 @@ let counts = [0];
 
 function preload() {
   pi = loadStrings("pi1000000.txt");
+  man = loadImage("man.png");
+  woman = loadImage("woman.png");
 }
 
 function setup() {
@@ -46,4 +48,17 @@ function draw() {
   strokeWeight(0.7);
   stroke(random(128), random(128), random(128));
   bezier(x1, y1, 0, 0, 0, 0, x2, y2);
+
+  imageMode(CENTER);
+  image(woman, 0, 0, 100, 100);
+
+  for (let i = 0; i <= 10; i++) {
+    imageMode(CENTER);
+    let a = map(i, 0, 10, 0, TWO_PI);
+
+    let x = (r / 2 + 50) * cos(a);
+    let y = (r / 2 + 50) * sin(a);
+
+    image(man, x, y, 60, 60);
+  }
 }
