@@ -2,7 +2,7 @@ let pi;
 let digits = [];
 let index = 0;
 let diff = 2;
-let r = 400;
+let r = 600;
 
 function preload() {
   pi = loadStrings("pi1000000.txt");
