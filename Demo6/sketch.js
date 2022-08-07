@@ -41,6 +41,6 @@ function draw() {
   let y2 = (windowHeight / 3) * sin(a2);
 
   strokeWeight(0.5);
-  stroke(random(128, 192), random(128, 192), random(128, 192));
+  stroke(random(72, 128), random(72, 128), random(72, 128));
   bezier(x1, y1, 0, 0, 0, 0, x2, y2);
 }
