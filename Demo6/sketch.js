@@ -15,7 +15,7 @@ function setup() {
   strokeWeight(0.5);
   noFill();
   translate(width / 2, height / 2);
-  ellipse(0, 0, windowHeight / 1.5, windowHeight / 1.5);
+  ellipse(0, 0, windowHeight / 1.8, windowHeight / 1.8);
 
   const piString = pi[0];
   const sdigits = piString.split("");
@@ -34,11 +34,11 @@ function draw() {
   let a1 = map(digit, 0, 10, 0, TWO_PI) + random(-diff, diff);
   let a2 = map(nextDigit, 0, 10, 0, TWO_PI) + random(-diff, diff);
 
-  let x1 = (windowHeight / 3) * cos(a1);
-  let y1 = (windowHeight / 3) * sin(a1);
+  let x1 = (windowHeight / 3.6) * cos(a1);
+  let y1 = (windowHeight / 3.6) * sin(a1);
 
-  let x2 = (windowHeight / 3) * cos(a2);
-  let y2 = (windowHeight / 3) * sin(a2);
+  let x2 = (windowHeight / 3.6) * cos(a2);
+  let y2 = (windowHeight / 3.6) * sin(a2);
 
   strokeWeight(0.5);
   stroke(random(72, 128), random(72, 128), random(72, 128));
