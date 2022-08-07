@@ -2,7 +2,7 @@ let pi;
 let digits = [];
 let index = 0;
 let diff = 0.25;
-let r = 400;
+let r = 380;
 let c = random(255);
 let counts = [0];
 
