@@ -3,6 +3,7 @@ let digits = [];
 let index = 0;
 let diff = 2;
 let r = 500;
+let c = random(255);
 
 function preload() {
   pi = loadStrings("pi1000000.txt");
@@ -41,7 +42,7 @@ function draw() {
   let x2 = (r / 2) * cos(a2);
   let y2 = (r / 2) * sin(a2);
 
-  strokeWeight(0.5);
-  stroke(random(72, 128), random(72, 128), random(72, 128));
+  strokeWeight(0.7);
+  stroke(random(128), random(128), random(128));
   bezier(x1, y1, 0, 0, 0, 0, x2, y2);
 }
