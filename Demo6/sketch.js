@@ -12,7 +12,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  frameRate(24);
+  frameRate(30);
   background(0);
   stroke(255);
   strokeWeight(0.5);
