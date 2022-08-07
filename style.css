@@ -5,6 +5,12 @@ body {
   /* color: #000; */
   padding: 0px;
   margin: 0;
+  justify-content: center;
+}
+
+#list {
+  margin: auto;
+  width: fit-content;
 }
 
 #description {
