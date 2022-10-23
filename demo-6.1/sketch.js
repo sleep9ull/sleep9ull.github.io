@@ -2,7 +2,7 @@ let pi;
 let digits = [];
 let index = 0;
 let diff = 0.1;
-let r = 500;
+let r = 350;
 let c = random(255);
 let counts = [0];
 
@@ -50,7 +50,7 @@ function draw() {
   bezier(x1, y1, 0, 0, 0, 0, x2, y2);
 
   imageMode(CENTER);
-  image(woman, 0, 0, 100, 100);
+  image(woman, 410, -120, 100, 100);
 
   for (let i = 0; i <= 10; i++) {
     imageMode(CENTER);
@@ -61,4 +61,11 @@ function draw() {
 
     image(man, x, y, 60, 60);
   }
+
+  image(man, 300, 180, 60, 60);
+  image(man, 450, 180, 60, 60);
+  stroke(200);
+  strokeWeight(2);
+  line(360, 220, 450, 220);
+  bezier(x1, y1, 0, 0, 0, 0, x2, y2);
 }
